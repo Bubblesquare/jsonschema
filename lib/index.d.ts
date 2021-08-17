@@ -55,6 +55,8 @@ export interface Schema {
     $ref?: string
     title?: string
     description?: string
+    examples?: unknown[]
+    default?: unknown
     multipleOf?: number
     maximum?: number
     exclusiveMaximum?: number | boolean
@@ -71,6 +73,9 @@ export interface Schema {
     maxProperties?: number
     minProperties?: number
     required?: string[] | boolean
+    readOnly?: boolean
+    writeOnly?: boolean
+    deprecated?: boolean
     additionalProperties?: boolean | Schema
     definitions?: {
         [name: string]: Schema
